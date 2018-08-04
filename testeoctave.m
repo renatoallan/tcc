@@ -7,3 +7,6 @@ if (2+2 < 0)
 elseif
   disp("buceta");
 endif
+
+a = 2;
+save d.mat a
