@@ -1,3 +1,6 @@
+clear all
+close all
+clc
 
 %vav = 4.624;
 velocidade = 4.624;
@@ -78,10 +81,10 @@ for i=1:length(z)
     for o=1:length(aeao)
         for qw=1:length(va)
             for s=1:length(pd)
-          
+                
                 clear x07 y07 x55 y55 x1 y1
                 for a=1:length(j)
-                
+                    
                     soma_kt = 0;
                     soma_kq = 0;
                     soma_dkt = 0;
@@ -131,7 +134,7 @@ for i=1:length(z)
                     
                     %if (abs(kq_temp-soma_kq)<erro)%
                     
-                    if ((soma_kq > 0) && (soma_kt > 0))
+                    if (~(soma_kq < 0 ) && ~(soma_kt < 0))
                         %{
                             x04(a04) = k_temp^0.2;
                             y04(a04)= pd(s);
@@ -196,8 +199,8 @@ for i=1:length(z)
                                             kq_maxeficiencia = soma_kq;
                                             va_maxeficiencia = va(qw);
                                             k_maxeficiencia = k_temp^0.2;
-                                        endifif
-                                    endifif
+                                        endif
+                                    endif
                                 elseif (pd(s) == 0.7)
                                     if(abs(kq_temp-soma_kq) < erro_pd07 && abs(j(a)-lz) < 0.01)
                                         erro_pd07 = abs(kq_temp-soma_kq);
@@ -312,7 +315,7 @@ for i=1:length(z)
                                             k_maxeficiencia = k_temp^0.2;
                                         endif
                                     endif
-                               elseif (abs(pd(s)-1.400)<0.00001)
+                                elseif (abs(pd(s)-1.400)<0.00001)
                                     if(abs(kq_temp-soma_kq) < erro_pd14 && abs(j(a)-lz) < 0.01)
                                         erro_pd14 = abs(kq_temp-soma_kq);
                                         j_pd14 = lz;
@@ -336,22 +339,22 @@ for i=1:length(z)
                         
                         
                         
-                            %end
-                            %aux = aux + 1;
-                            
-                            %plot(x07, y07,'-r');
-                            %hold on
-                            
-                            %plot(x55, y55,'-b');
-                            %hold on
-                            
-                            % plot(x1, y1,'-k');
-                            % hold on
-                        endif
-                    endfor
-                    
+                        %end
+                        %aux = aux + 1;
+                        
+                        %plot(x07, y07,'-r');
+                        %hold on
+                        
+                        %plot(x55, y55,'-b');
+                        %hold on
+                        
+                        % plot(x1, y1,'-k');
+                        % hold on
+                    endif
+                endfor
+                
             endfor
-            disp("---------------------------------");
+            disp('---------------------------------');
             disp(maxeficiencia);
             disp(j_maxeficiencia);
             disp(pd_maxeficiencia);
@@ -359,7 +362,7 @@ for i=1:length(z)
             disp(kq_maxeficiencia);
             disp(va_maxeficiencia);
             disp(k_maxeficiencia);
-            disp("---------------------------------");
+            disp('---------------------------------');
             maxeficiencia = -1 ;
             j_maxeficiencia = 0;
             pd_maxeficiencia = 0;
@@ -367,12 +370,12 @@ for i=1:length(z)
             kq_maxeficiencia = 0;
             va_maxeficiencia = 0;
             k_maxeficiencia = 0;
-           %plot(plotarjalt, plotarkqalt,'-g');
-           %hold on
-        endfor
-           
+            %plot(plotarjalt, plotarkqalt,'-g');
+            %hold on
         endfor
         
+    endfor
+    
 endfor
 
 
@@ -382,7 +385,7 @@ endfor
 %{
 plot(x04, y04, '-o');
 xlabel('k^{0.2}')
-ylabel('Razão Passo-Diâmetro') % y-axis label
+ylabel('RazÃ£o Passo-DiÃ¢metro') % y-axis label
 hold on
 plot(x55, y55, '-^');
 hold on
@@ -419,4 +422,4 @@ j_pd13
 pd13
 j_pd14
 pd14
-%} 
+%}
