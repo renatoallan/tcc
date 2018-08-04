@@ -1,6 +1,8 @@
-# Created by Octave 4.0.0, Sat Aug 04 13:10:54 2018 UTC <renatoallan96@instance-1>
-# name: a
-# type: scalar
-2
+# Created by Octave 4.0.0, Sat Aug 04 17:58:04 2018 UTC <renatoallan96@instance-1>
+# name: salva
+# type: matrix
+# rows: 1
+# columns: 15
+ 2 4 7 11 16 22 29 37 46 56 67 79 92 106 121
 
 
