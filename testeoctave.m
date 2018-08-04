@@ -8,5 +8,9 @@ elseif
   disp("buceta");
 endif
 
-a = 2;
-save d.mat a
+a=1;
+
+for i=1:15
+a = a+i;
+save a d.mat
+endfor
