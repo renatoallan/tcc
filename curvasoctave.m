@@ -354,7 +354,7 @@ for i=1:length(z)
                 endfor
                 
             endfor
-            disp('---------------------------------');
+            disp("---------------------------------");
             disp(maxeficiencia);
             disp(j_maxeficiencia);
             disp(pd_maxeficiencia);
@@ -362,7 +362,7 @@ for i=1:length(z)
             disp(kq_maxeficiencia);
             disp(va_maxeficiencia);
             disp(k_maxeficiencia);
-            disp('---------------------------------');
+            disp("---------------------------------");
             maxeficiencia = -1 ;
             j_maxeficiencia = 0;
             pd_maxeficiencia = 0;
