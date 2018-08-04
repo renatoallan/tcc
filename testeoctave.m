@@ -10,9 +10,9 @@ endif
 
 a=1;
 
-salva = cell(15,1)
+salva = zeros(15)
 for i=1:15
 a = a+i;
-salva{i} = a;
+salva(i) = a;
 endfor
 save d.mat salva;
