@@ -355,13 +355,13 @@ for i=1:length(z)
                 
             endfor
             disp("---------------------------------");
-            disp(maxeficiencia);
-            disp(j_maxeficiencia);
-            disp(pd_maxeficiencia);
-            disp(kt_maxeficiencia);
-            disp(kq_maxeficiencia);
-            disp(va_maxeficiencia);
-            disp(k_maxeficiencia);
+            %disp(maxeficiencia);
+            %disp(j_maxeficiencia);
+            %disp(pd_maxeficiencia);
+            %disp(kt_maxeficiencia);
+            %disp(kq_maxeficiencia);
+            %disp(va_maxeficiencia);
+            %disp(k_maxeficiencia);
             disp("---------------------------------");
             maxeficiencia = -1 ;
             j_maxeficiencia = 0;
