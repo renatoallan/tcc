@@ -4,15 +4,15 @@ endfor
 
 if (2+2 < 0)
   disp("cu");
-elseif
+else
   disp("buceta");
 endif
 
 a=1;
 
-salva = zeros(15,1)
+
 for i=1:15
-a = a+i;
-salva(i,1) = a;
+ a = a+i;
+salva(i)= a;
 endfor
-save d.mat salva;
+save d.mat salva
